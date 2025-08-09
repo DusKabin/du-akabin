@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Paneli | Duşakabin Yönetimi</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Admin Paneli</h1>
+    </header>
+
+    <div class="admin-form">
+        <h2>Yeni Ürün Ekle</h2>
+        <input type="text" id="urunAd" placeholder="Ürün Adı">
+        <input type="text" id="urunAciklama" placeholder="Açıklama">
+        <input type="text" id="urunFiyat" placeholder="Fiyat">
+        <input type="text" id="urunResim" placeholder="Resim URL">
+        <button onclick="urunEkle()">Ürün Ekle</button>
+    </div>
+
+    <div class="urun-listesi" id="adminUrunler">
+        <!-- Ürünler buraya gelecek -->
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
