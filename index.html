@@ -3,19 +3,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Duşakabin Satışı | Premium Ürünler</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>BİMİNİ Duşakabin | Su Geçirmez Tasarımlar</title>
+    <style>
+        :root {
+            --primary: #2568b0; /* Ana mavi */
+            --secondary: #ff9f1c; /* Vurgu turuncusu */
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+        /* NAVBAR */
+        .navbar {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        .nav-links a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        /* HERO */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+        /* HAKKIMIZDA */
+        .about {
+            padding: 80px 5%;
+            background: #f9f9f9;
+            text-align: center;
+        }
+        .about h2 {
+            color: var(--primary);
+            margin-bottom: 30px;
+        }
+        /* ÜRÜNLER */
+        .products {
+            padding: 80px 5%;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        .product-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+        .product-info {
+            padding: 20px;
+        }
+        .whatsapp-btn {
+            display: block;
+            background: #25D366;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 15px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        /* FOOTER */
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 30px 5%;
+        }
+        /* ADMIN PANEL LİNKİ (GİZLİ) */
+        .admin-link {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--primary);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Lüks Duşakabinler</h1>
-        <p>WhatsApp'tan hemen sipariş verin: <a href="https://wa.me/905551234567">0555 123 45 67</a></p>
-    </header>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">BİMİNİ DUŞAKABİN</div>
+            <div class="nav-links">
+                <a href="#urunler">Ürünler</a>
+                <a href="#hakkimizda">Hakkımızda</a>
+                <a href="#iletisim">İletişim</a>
+            </div>
+        </div>
+    </nav>
 
-    <div class="urunler" id="urunler">
-        <!-- Ürünler buraya JavaScript ile gelecek -->
-    </div>
+    <!-- HERO BÖLÜMÜ -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>SU GEÇİRMEZ LÜKS TASARIMLAR</h1>
+            <p>20 yıllık ustalık, %100 müşteri memnuniyeti</p>
+        </div>
+    </section>
 
-    <script src="js/script.js"></script>
+    <!-- HAKKIMIZDA -->
+    <section class="about" id="hakkimizda">
+        <h2>BİZ KİMİZ?</h2>
+        <p>2003'ten beri İstanbul'da premium duşakabin üretiyoruz. Kullandığımız 10mm temperli camlar ve kaliteli aksesuarlarla 5 yıl garanti veriyoruz. 5000+ mutlu müşteri!</p>
+    </section>
+
+    <!-- ÜRÜNLER -->
+    <section class="products" id="urunler">
+        <h2 style="text-align: center; color: var(--primary); margin-bottom: 40px;">EN ÇOK SATANLAR</h2>
+        <div class="product-grid">
+            <!-- Ürün 1 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1600566752225-2206a5b0c0f3" alt="Lüks Duşakabin">
+                </div>
+                <div class="product-info">
+                    <h3>Premium Cam Kabin</h3>
+                    <p>8mm temperli cam, krom aksesuarlar</p>
+                    <p><strong>₺5.999</strong></p>
+                    <a href="https://wa.me/905551234567?text=Premium%20Cam%20Kabin%20hakkında%20bilgi%20istiyorum" class="whatsapp-btn">
+                        WhatsApp'tan Sipariş
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Ürün 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea" alt="Köşe Duşakabin">
+                </div>
+                <div class="product-info">
+                    <h3>Köşe Duşakabin</h3>
+                    <p>90 derece açılı, alüminyum çerçeve</p>
+                    <p><strong>₺3.499</strong></p>
+                    <a href="https://wa.me/905551234567?text=Köşe%20Duşakabin%20hakkında%20bilgi%20istiyorum" class="whatsapp-btn">
+                        WhatsApp'tan Sipariş
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- İLETİŞİM -->
+    <footer id="iletisim">
+        <h3>BİZE ULAŞIN</h3>
+        <p>📞 0555 123 45 67</p>
+        <p>📌 İstanbul, Türkiye</p>
+    </footer>
+
+    <!-- GİZLİ ADMIN LİNK -->
+    <a href="admin.html" class="admin-link" title="Yönetim Paneli">⚙️</a>
 </body>
 </html>
